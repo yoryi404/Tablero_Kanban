@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(157, 149, 221);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+}
+
+.list-container {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  gap: 12px;
+  margin: 12px;
+  border: 1px solid gray;
+  border-radius: 5%
+}
+
+
+.list-container button {
+  width: fit-content;
+}
+
+.tittle-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 15%;
+  background: rgb(191, 175, 210);
+  border: 1px solid rgb(122, 122, 122);
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  background: white;
+  border-radius: 10%;
+  border: 1px solid rgb(122, 122, 122);
+  margin: 8px;
+}
