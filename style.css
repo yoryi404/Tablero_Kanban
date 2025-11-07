@@ -42,14 +42,43 @@ main {
 }
 
 .card-container {
-  display: flex;
-  align-items: center;
+  position: relative;
   background: var(--color-secondary);
   border-radius: 8px;
   border: 1px solid rgb(122, 122, 122);
   margin: 8px;
   padding: 16px;
+  overflow: hidden;
 }
+
+.card-container p {
+  margin: 0;
+  transition: transform 0.3s ease;
+}
+
+.card-container i {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.card-container:hover>p {
+  cursor: pointer;
+  transform: translateX(-10px);
+}
+
+.card-container:hover i {
+  opacity: 1;
+}
+
+.card-container i:hover {
+  transform: scale(1.2);
+}
+
 
 .list-container {
   background-color: var(--color-secondary);
@@ -63,7 +92,11 @@ main {
   border-radius: 15px;
 }
 
-.list-container p {
+.new-card:hover{
+  scale: 1.01;
+  cursor: pointer;
+  border-radius: 4px;
+  background: rgb(217, 217, 217);
   padding: 4px;
 }
 
@@ -106,6 +139,8 @@ main {
 }
 
 .button-container i:hover {
+  background: rgb(211, 211, 211);
+  border-radius: 4px;
   transform: scale(1.2);
   cursor: pointer;
 
